@@ -104,11 +104,40 @@ textarea{
 	background-color: #d25858;
 	color: #eaeaea;
 }
+header{
+	display: block;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+	background-color: #545454;
+	color: white;
+	padding: 30px;
+}
+header h1{
+	text-align: center;
+	display: block;
+	font-family: arial;
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 0.3em;
+	margin: 0;
+	padding: 0;
+}
+header h1 span{
+	font-weight: 400;
+	color: orange;
+	letter-spacing: 0.2em;
+}
 
 	</style>
 </head>
 <body>
-<form class="form1" action="add_apply" method="post">
+<header>
+	<h1><span>IT</span>Academy</h1>
+</header>
+<form class="form1" action="add_apply" method= "post">
 	<h1>Добавление заявки</h1>
 	<h5>ФИО<span class="redstar">*</span></h5>
 	<input class="focuses" type="text" name ="fio">

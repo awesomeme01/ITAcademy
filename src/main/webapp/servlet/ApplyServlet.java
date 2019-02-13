@@ -29,7 +29,6 @@ public class ApplyServlet extends HttpServlet {
                     req.getParameter("selfstory")
             );
             result = db.addApplication(application);
-
         }
         catch (NullPointerException e) {
             System.out.println(e);
@@ -37,6 +36,7 @@ public class ApplyServlet extends HttpServlet {
         }
         PrintWriter out = resp.getWriter();
         out.println(result ? "Заявка успешно добавлена" : "Не получилось добавить заявку");
+        out.print("<a style=\"display: inline-block; color: white; text-decoration: none; margin: 10px; padding: 10px; border-radius: 3px; background-color: green;\" href=\"index.jsp\">Back</a>");
         System.out.println(application);
     }
 }

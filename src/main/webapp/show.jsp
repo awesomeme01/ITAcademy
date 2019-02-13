@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<style type="text/css">
+
 		body{
 	background-color: lightgray;
 	margin: 0;
@@ -18,6 +19,7 @@ header{
 	background-color: #545454;
 	color: white;
 	padding: 30px;
+	border-bottom: 30px;
 }
 header h1{
 	text-align: center;
@@ -34,34 +36,6 @@ header h1 span{
 	color: orange;
 	letter-spacing: 0.2em;
 }
-#buttonBlock{
-	width: 35%;
-	align-self: center;
-	margin: 50px auto;
-	display: block;
-}
-.button{
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	background-color: lightblue;
-	font-family: arial;
-	color: gray;
-	font-size: 20px;
-	width: 60%;
-	margin: 20px auto;
-	padding: 10px 15px;
-	border-radius: 5px;
-	box-shadow: 0px 0px .5em #223165;
-	transition: 0.3s ease;
-}
-.button:hover{
-	background-color: #d25858;
-	color: #eaeaea;
-	transition: 0.3s ease;
-	box-shadow: 0px 0px .3em #223165;
-}
-
 	</style>
 	<title>IT|Academy</title>
 </head>
@@ -69,9 +43,25 @@ header h1 span{
 <header>
 	<h1><span>IT</span>Academy</h1>
 </header>
-<div id="buttonBlock">
-	<a href="apply.jsp" class="button">Создать заявку</a>
-	<a href="" class="button">Посмотреть заявку</a>
-</div>
+<table>
+	<tr>
+		<th>id</th>
+		<th>fio</th>
+		<th>courses</th>
+		<th>email</th>
+		<th>isONline</th>
+		<th>birthdate</th>
+	</tr>
+	<c: foreach items = "${applications}" var="item">
+		<tr>
+			<td>${item.id}</td>
+			<td>${item.fio}</td>
+			<td>${item.courses}</td>
+			<td>${item.email}</td>
+			<td>${item.isOnline}</td>
+			<td>${item.birthdate}</td>
+		</tr>
+	<c:foreach>
+</table>
 </body>
 </html>
